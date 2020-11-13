@@ -6,4 +6,6 @@ void bubble_sort(void *base, size_t __nmemb,
                  size_t __size, __cmp_fn_t cmp);
 void selection_sort(void *base, size_t __nmemb, 
                  size_t __size, __cmp_fn_t cmp);
+void insertion_sort(void *base, size_t __nmemb, 
+                 size_t __size, __cmp_fn_t cmp);
 
