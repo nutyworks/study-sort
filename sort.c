@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include "sort.h"
 
-#define __SWAP(a, b, l) do {                \
-    char *__a = (a), *__b = (b), __tmp;     \
-    size_t len = (l);                       \
-    for (size_t __i = 0; __i != l; __i++) { \
-        __tmp = __a[__i];                   \
-        __a[__i] = __b[__i];                \
-        __b[__i] = __tmp;                   \
-    }                                       \
+#define __SWAP(a, b, l) do {                  \
+    char *__a = (a), *__b = (b), __tmp;       \
+    for (size_t __i = 0; __i != (l); __i++) { \
+        __tmp = __a[__i];                     \
+        __a[__i] = __b[__i];                  \
+        __b[__i] = __tmp;                     \
+    }                                         \
 } while(0)
 
 #define __IDX(base, idx, size) ((base) + (idx) * (size)) 
