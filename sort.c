@@ -67,7 +67,7 @@ void insertion_sort(void *base, size_t __nmemb,
         __COPY(__IDX(lo, i, __size), cp, __size);
 
         size_t j = i - 1;
-        for (; ~j && cmp(cp, __IDX(lo, j, __size)) < 0; --j) {
+        for (; ~j && cmp(__IDX(lo, j, __size), cp) > 0; --j) {
             __COPY(
                 __IDX(lo, j, __size), 
                 __IDX(lo, j + 1, __size), 
